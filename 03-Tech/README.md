@@ -1,2 +1,2 @@
-"# 03 - Tech" 
+"# 03-Tech" 
 "This directory contains technical knowledge and related files." 

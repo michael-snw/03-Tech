@@ -1,37 +1,39 @@
 @echo off
-cd "F:\AIIA\Git"  REM Change this path if necessary
+SETLOCAL ENABLEDELAYEDEXPANSION
 
-set projects=(01 - Me,02 - Skill,03 - Tech,04 - AI,05 - Streaming)
-set repos=(https://github.com/michael-snw/01-Me.git,https://github.com/michael-snw/02-Skill.git,https://github.com/michael-snw/03-Tech.git,https://github.com/michael-snw/04-AI.git,https://github.com/michael-snw/05-Streaming.git)
+REM Chemin du répertoire principal
+set "baseDir=F:\AIIA\Git"
 
-for %%i in (0,1,2,3,4) do (
-    set projectName=%%~i
-    set repoURL=%%~j
-    
-    echo Processing %projectName%...
-    cd "F:\AIIA\Git\%projectName%"
+REM Déclarations des projets
+set projects[0]="01 - Me"
+set projects[1]="02 - Skill"
+set projects[2]="03 - Tech"
+set projects[3]="04 - AI"
+set projects[4]="05 - Streaming"
 
-    REM Verify if the directory is already a Git repository
-    if not exist ".git" (
-        echo Initializing Git repository for %projectName%...
-        git init
-        git remote add origin %repoURL%
+REM Messages de commit pour chaque projet
+set commitMessages[0]="Mise à jour de 01 - Me"
+set commitMessages[1]="Mise à jour de 02 - Skill"
+set commitMessages[2]="Mise à jour de 03 - Tech"
+set commitMessages[3]="Mise à jour de 04 - AI"
+set commitMessages[4]="Mise à jour de 05 - Streaming"
+
+REM Boucle à travers chaque projet
+for /L %%i in (0, 1, 4) do (
+    echo Traitement de !projects[%%i]!
+    cd "!baseDir!\!projects[%%i]!" || (
+        echo Le chemin d'accès spécifié est introuvable.
+        exit /b
     )
-
-    echo Adding files to %projectName%...
+    REM Ajoute les fichiers
     git add .
-
-    echo Enter the commit message for %projectName%:
-    set /p commitMessage="> "
-
-    echo Committing changes for %projectName%...
-    git commit -m "%commitMessage%"
-
-    echo Pushing changes for %projectName%...
-    git push -u origin main
-
-    echo Completed for %projectName%.
+    
+    REM Utilise le message de commit prédéfini
+    git commit -m "!commitMessages[%%i]!"
+    
+    REM Pousse les changements vers GitHub
+    git push
 )
 
-echo All projects have been updated!
+echo Tous les projets ont été mis à jour !
 pause
