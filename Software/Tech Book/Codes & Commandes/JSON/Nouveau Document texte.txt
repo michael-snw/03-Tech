@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "name": "t-shirt",
+        "description": "a nice t-shirt that can be worn any time inside and outside",
+        "type": "clothes",
+        "unit": "piece",
+        "variant": [
+            {
+                "sku": "3ER53TG7",
+                "color": "red",
+                "size": "M",
+                "price": 19,
+                "quantity": 20
+            },
+            {
+                "sku": "3ER53TG8",
+                "color": "green",
+                "size": "M",
+                "price": 20,
+                "quantity": 130
+            },
+            {
+                "sku": "3ER53TG9",
+                "color": "blue",
+                "size": "L",
+                "price": 22,
+                "quantity": 50
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "hoodie",
+        "description": "a warm and comfortable hoodie for cold days",
+        "type": "clothes",
+        "unit": "piece",
+        "variant": [
+            {
+                "sku": "4FG67HI8",
+                "color": "black",
+                "size": "L",
+                "price": 35,
+                "quantity": 11
+            },
+            {
+                "sku": "4FG67HI9",
+                "color": "gray",
+                "size": "M",
+                "price": 35,
+                "quantity": 10
+            },
+            {
+                "sku": "4FG67H10",
+                "color": "blue",
+                "size": "XL",
+                "price": 40,
+                "quantity": 20
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "jeans",
+        "description": "classic denim jeans for a casual look",
+        "type": "clothes",
+        "unit": "piece",
+        "variant": [
+            {
+                "sku": "5JK89L12",
+                "color": "blue",
+                "size": "32",
+                "price": 25,
+                "quantity": 40
+            },
+            {
+                "sku": "5JK89L13",
+                "color": "black",
+                "size": "34",
+                "price": 28,
+                "quantity": 30
+            },
+            {
+                "sku": "5JK89L14",
+                "color": "gray",
+                "size": "30",
+                "price": 25,
+                "quantity": 10
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "sneakers",
+        "description": "stylish sneakers for a sporty look",
+        "type": "shoes",
+        "unit": "pair",
+        "variant": [
+            {
+                "sku": "6MN78O23",
+                "color": "white",
+                "size": "US 9",
+                "price": 50,
+                "quantity": 20
+            },
+            {
+                "sku": "6MN78O24",
+                "color": "black",
+                "size": "US 8",
+                "price": 55,
+                "quantity": 30
+            },
+            {
+                "sku": "6MN78O25",
+                "color": "blue",
+                "size": "US 10",
+                "price": 52,
+                "quantity": 5
+            }
+        ]
+    }
+]
